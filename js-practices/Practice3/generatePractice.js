@@ -22,16 +22,16 @@ function generate(testLengthArray){
   //   })
   // ); 
   // Remove this line and change to your own algorithm
-  let arr = new Array(testLengthArray.length);
+  let arr = [];
   for (let index = 0; index < testLengthArray.length; index++) {
-    let input = generateArray(testLengthArray,index);
     let target = testLengthArray[index];
+    let input = generateArray(testLengthArray,index);
     let output = generateOutput(input,target);
     
     let testData = {
       input: input,
-      target: target,
-      output: output
+      output: output,
+      target: target
     };
     arr.push(testData);
   }
